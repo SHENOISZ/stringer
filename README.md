@@ -21,7 +21,7 @@ cout << str.len(str.split('e', text)) << endl;
 // ~$:4
 ```
 <br>
-```
+```c++
 // format text
 string fac[] = {"pro", "com", "C++", "NULL"};
 string comum = "{0}gramando {1} {2}";
@@ -32,7 +32,7 @@ cout << comum << endl;
 // ~$:programando com C++
 ```
 <br>
-```
+```c++
 string text = "desenvolvendo software com C++";
 
 // count string
@@ -40,7 +40,7 @@ cout << str.length(text) << endl;
 // ~$:29
 ```
 <br>
-```
+```c++
 string text = "desenvolvendo software com C++";
 
 // replace char
@@ -60,7 +60,7 @@ cout << str.replaceAll("en", "EN", text) << endl;
 // ~$:desENvolvENdo software com C++
 ```
 <br>
-```
+```c++
 string text = "desenvolvendo software com C++";
 
 // get part string
@@ -68,7 +68,7 @@ cout << str.substr(0, 13, text) << endl;
 // ~$:desenvolvendo
 ```
 <br>
-```
+```c++
 string fac[] = {"pro", "com", "C++", "NULL"};
 
 // if exist "C++" in array: true; if not in array: false
@@ -76,7 +76,7 @@ cout << str.exists("C++", fac) << endl;
 // ~$:true
 ```
 <br>
-```
+```c++
 string text = "desenvolvendo software com C++";
 
 // count a char in string
@@ -84,7 +84,7 @@ cout << str.charCount('e', text) << endl;
 // ~$: 3
 ```
 <br>
-```
+```c++
 string text = "desenvolvendo software com C++";
 
 // return positions of 'e' in string
@@ -98,7 +98,7 @@ cout << "char position:"
 // ~$:char position:1 position:3 position:9
 ```
 <br>
-```
+```c++
 string text = "desenvolvendo software com C++";
 
 // return position of "en" in string
@@ -123,7 +123,7 @@ cout << str.find("en", text)->exists() << endl;
 // ~$:true
 ```
 <br>
-```
+```c++
 // conversion types
 cout << str.toInt("17")
     << " - " << str.toFloat("17.4")
@@ -134,7 +134,7 @@ cout << str.toInt("17")
 // ~$:17 - 17.4 - 17.4 - 17 - 17.4
 ```
 <br>
-```
+```c++
 // from char for string
 char caract = 'f';
 

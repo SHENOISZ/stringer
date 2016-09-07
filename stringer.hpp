@@ -357,6 +357,42 @@ class String
         return nova;
     }
 
+    static Util* find(char cc, string texto)
+    {
+        string src;
+        src = cc;
+        int total = texto.length();
+        int src_ = src.length();
+        int found = 0, index = 0;
+
+        int *map = new int[(total / src_) + 1];
+        string temp;
+
+        bool finded = true;
+
+        for (int i = 0; i < total; i++)
+        {
+            temp = String::substr(i, i + src_, texto);
+
+            if (temp == src) {
+
+                map[found] = i;
+
+                if (finded)
+                {
+                    index = i;
+                    finded = false;
+                }
+
+                found++;
+            }
+        }
+
+        map[found] = -1;
+
+        return new Util(index, String::len(map), map);
+    }
+
     static Util* find(string src, string texto)
     {
         int total = texto.length();
@@ -427,6 +463,15 @@ class String
         i << num;
 
         return i.str();
+    }
+
+    static string toString(char cc)
+    {
+        string letra;
+
+        letra = cc;
+
+        return letra;
     }
 
     static int toInt(string texto)

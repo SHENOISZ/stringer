@@ -133,5 +133,15 @@ cout << str.toInt("17")
 
 // ~$:17 - 17.4 - 17.4 - 17 - 17.4
 ```
+<br>
+```
+// from char for string
+char caract = 'f';
+
+string tre = str.toString(caract);
+
+cout << tre << endl;
+// ~$:f
+```
 
 ### LICENSE MIT

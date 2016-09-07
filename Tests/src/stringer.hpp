@@ -441,6 +441,77 @@ class String
         return texto;
     }
 
+    static string removeAll(string item, string texto)
+    {
+        string nova = texto;
+        int size = item.length();
+
+        for (int i = 0; i < texto.length(); i++)
+        {
+            if (String::substr(i, size + i, nova) == item)
+            {
+                nova = String::substr(0, i, nova) +
+                String::substr(size + i, nova.length(), nova);
+            }
+        }
+
+        return nova;
+    }
+
+    static string removeAll(char cc, string texto)
+    {
+        string nova;
+
+        for (int i = 0; i < texto.length(); i++)
+        {
+            if (texto[i] != cc)
+            {
+                nova += texto[i];
+            }
+        }
+
+        return nova;
+    }
+
+    static string remove(string item, string texto)
+    {
+        string nova = texto;
+        int size = item.length();
+
+        for (int i = 0; i < texto.length(); i++)
+        {
+            if (String::substr(i, size + i, nova) == item)
+            {
+                nova = String::substr(0, i, nova) +
+                String::substr(size + i, nova.length(), nova);
+                break;
+            }
+        }
+
+        return nova;
+    }
+
+    static string remove(char cc, string texto)
+    {
+        string nova;
+        int size = texto.length();
+        int pos = 0;
+
+        for (int i = 0; i < size; i++)
+        {
+            if (texto[i] != cc)
+            {
+                nova += texto[i];
+                pos = i;
+                break;
+            }
+        }
+
+        nova += String::substr(pos + 1, size, texto);
+
+        return nova;
+    }
+
     static string toString(double num)
     {
         stringstream i;

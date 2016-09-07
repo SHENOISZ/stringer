@@ -143,5 +143,29 @@ string tre = str.toString(caract);
 cout << tre << endl;
 // ~$:f
 ```
+<br>
+```c++
+// remove char in string
+cout << str.remove('t', "testing") << endl;
+// ~$:esting
+```
+<br>
+```c++
+// remove all char in string
+cout << str.removeAll('t', "testing") << endl;
+// ~$:esing
+```
+<br>
+```c++
+// remove all string in string
+cout << str.remove("te", "testing more a test") << endl;
+// ~$:sting more a test
+```
+<br>
+```c++
+// remove all string in string
+cout << str.removeAll("te", "testing more a test") << endl;
+// ~$:sting more a st
+```
 
 ### LICENSE MIT

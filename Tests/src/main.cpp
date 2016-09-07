@@ -14,15 +14,15 @@ int main(int argc, const char* argv[])
 
     // split with char
     cout << str.split('e', text)[4] << endl;
-    // $: com C++
+    // ~$: com C++
 
     // split with string
     cout << str.split("com", text)[1] << endl;
-    // $: C++
+    // ~$: C++
 
     // array count
     cout << str.len(str.split('e', text)) << endl;
-    // $:4
+    // ~$:4
 
     cout << "\n============================================\n" << endl;
 
@@ -33,47 +33,48 @@ int main(int argc, const char* argv[])
     comum = str.format(comum, fac);
 
     cout << comum << endl;
-    // $:programando com C++
+    // ~$:programando com C++
 
     cout << "\n============================================\n" << endl;
     // count string
     cout << str.length(text) << endl;
-    // $:29
+    // ~$:29
 
     cout << "\n============================================\n" << endl;
 
     // replace char
     cout << str.replace('l', 'u', text) << endl;
-    // $:desenvouvendo software com C++
+    // ~$:desenvouvendo software com C++
 
     // replace char all
     cout << str.replaceAll('e', 'w', text) << endl;
-    // $:dwswnvolvwndo softwarw com C++
+    // ~$:dwswnvolvwndo softwarw com C++
 
     // replace string
     cout << str.replace("C++", "C-plusplus", text) << endl;
-    // $:desenvolvendo software com C-plusplus
+    // ~$:desenvolvendo software com C-plusplus
 
     // replace string all
     cout << str.replaceAll("en", "EN", text) << endl;
-    // $:desENvolvENdo software com C++
+    // ~$:desENvolvENdo software com C++
 
     cout << "\n============================================\n" << endl;
 
     // get part string
     cout << str.substr(0, 13, text) << endl;
-    // $:desenvolvendo
+    // ~$:desenvolvendo
 
     cout << "\n============================================\n" << endl;
 
     // if exist "C++" in array: true; if not in array: false
     cout << str.exists("C++", fac) << endl;
+    // ~$:true
 
     cout << "\n============================================\n" << endl;
 
     // count a char in string
     cout << str.charCount('e', text) << endl;
-    // $: 3
+    // ~$: 3
 
     cout << "\n============================================\n" << endl;
 
@@ -85,13 +86,13 @@ int main(int argc, const char* argv[])
         << maps[1] << " position:"
         << maps[2] << endl;
 
-    // $:char position:1 position:3 position:9
+    // ~$:char position:1 position:3 position:9
 
     cout << "\n============================================\n" << endl;
 
     // return position of "en" in string
     cout << str.find("en", text)->index() << endl;
-    // $:3
+    // ~$:3
 
     // return positions of "en" in string
     int *Maps = str.find("en", text)->indexes();
@@ -100,15 +101,15 @@ int main(int argc, const char* argv[])
         << Maps[0] << " position:"
         << Maps[1] << endl;
 
-    // $:string position:3 position:9
+    // ~$:string position:3 position:9
 
     // count "en" exist in string
     cout << str.find("en", text)->counter() << endl;
-    // $:1
+    // ~$:1
 
     // if "en" exists in string return true; if not false
     cout << str.find("en", text)->exists() << endl;
-    // $:true
+    // ~$:true
 
     cout << "\n============================================\n" << endl;
 
@@ -118,6 +119,32 @@ int main(int argc, const char* argv[])
         << " - " << str.toDouble("17.4")
         << " - " << str.toString(17)
         << " - " << str.toString(17.4) << endl;
+
+    // ~$:17 - 17.4 - 17.4 - 17 - 17.4
+
+    // from char for string
+    char caract = 'f';
+
+    string tre = str.toString(caract);
+
+    cout << tre << endl;
+    // ~$:f
+
+    // remove char in string
+    cout << str.remove('t', "testing") << endl;
+    // ~$:esting
+
+    // remove all char in string
+    cout << str.removeAll('t', "testing") << endl;
+    // ~$:esing
+
+    // remove all string in string
+    cout << str.remove("te", "testing more a test") << endl;
+    // ~$:sting more a test
+
+    // remove all string in string
+    cout << str.removeAll("te", "testing more a test") << endl;
+    // ~$:sting more a st
 
     return 0;
 }

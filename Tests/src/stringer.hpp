@@ -7,10 +7,8 @@
 #define for_each( item, items )\
  for(int i = 0; i <= shenoisz::String::len( items ) + 1; item = items[i], i++)
 
-using namespace std;
-
+namespace std {
 namespace shenoisz {
-
 
 class Util
 {
@@ -579,4 +577,5 @@ class String
 
 } str;
 
+}
 }

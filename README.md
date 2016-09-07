@@ -5,7 +5,7 @@
 
 // String  str
 
-```
+```c++
 string text = "desenvolvendo software com C++";
 
 // split with char

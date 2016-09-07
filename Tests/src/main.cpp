@@ -138,7 +138,7 @@ int main(int argc, const char* argv[])
     cout << str.removeAll('t', "testing") << endl;
     // ~$:esing
 
-    // remove all string in string
+    // remove string in string
     cout << str.remove("te", "testing more a test") << endl;
     // ~$:sting more a test
 

@@ -157,7 +157,7 @@ cout << str.removeAll('t', "testing") << endl;
 ```
 <br>
 ```c++
-// remove all string in string
+// remove string in string
 cout << str.remove("te", "testing more a test") << endl;
 // ~$:sting more a test
 ```

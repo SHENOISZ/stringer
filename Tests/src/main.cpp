@@ -130,6 +130,8 @@ int main(int argc, const char* argv[])
     cout << tre << endl;
     // ~$:f
 
+    cout << "\n============================================\n" << endl;
+
     // remove char in string
     cout << str.remove('t', "testing") << endl;
     // ~$:esting
@@ -145,6 +147,18 @@ int main(int argc, const char* argv[])
     // remove all string in string
     cout << str.removeAll("te", "testing more a test") << endl;
     // ~$:sting more a st
+
+    // remove a array string of string
+    string regex[] = {"e", "t", "g", "NULL"};
+
+    cout << str.ex_remove(regex, "testing") << endl;
+    // ~$:stin
+
+    // remove a array string of string
+    string regex_[] = {"e", "t", "g", "NULL"};
+
+    cout << str.ex_removeAll(regex_, "testing") << endl;
+    // ~$:sin
 
     return 0;
 }

@@ -167,5 +167,21 @@ cout << str.remove("te", "testing more a test") << endl;
 cout << str.removeAll("te", "testing more a test") << endl;
 // ~$:sting more a st
 ```
+<br>
+```c++
+// remove a array string of string
+string regex[] = {"e", "t", "g", "NULL"};
+
+cout << str.ex_remove(regex, "testing") << endl;
+// ~$:stin
+```
+<br>
+```c++
+// remove a array string of string
+string regex_[] = {"e", "t", "g", "NULL"};
+
+cout << str.ex_removeAll(regex_, "testing") << endl;
+// ~$:sin
+```
 
 ### LICENSE MIT

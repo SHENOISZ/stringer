@@ -7,6 +7,7 @@
 #define for_each( item, items )\
  for(int i = 0; i <= shenoisz::String::len( items ) + 1; item = items[i], i++)
 
+
 namespace std {
 namespace shenoisz {
 
@@ -516,6 +517,30 @@ class String
         i << num;
 
         return i.str();
+    }
+
+    static string ex_removeAll(string* items, string texto)
+    {
+        int size = String::len(items);
+
+        for (int i = 0; i <= size; i++)
+        {
+            texto = String::removeAll(items[i], texto);
+        }
+
+        return texto;
+    }
+
+    static string ex_remove(string* items, string texto)
+    {
+        int size = String::len(items);
+
+        for (int i = 0; i <= size; i++)
+        {
+            texto = String::remove(items[i], texto);
+        }
+
+        return texto;
     }
 
     static string toString(float num)

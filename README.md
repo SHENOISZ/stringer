@@ -69,14 +69,11 @@ cout << str.substr(0, 13, text) << endl;
 ```
 <br>
 ```c++
-string fac[] = {"pro", "com", "C++", "NULL"};
-
 // if exist "C++" in array of Char: true; if not in array: false
-cout << str.exists("C++", fac) << endl;
+string example = "programming with C++";
+cout << str.exists("C++", example) << endl;
 // ~$:true
-```
-<br>
-```c++
+
 // if exist "C++" in array of string: true; if not in array: false
 string frases[] = {"Developer", "C++", "C", "NULL"};
 cout << str.exists("C++", frases) << endl;

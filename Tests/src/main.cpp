@@ -67,7 +67,8 @@ int main(int argc, const char* argv[])
     cout << "\n============================================\n" << endl;
 
     // if exist "C++" in array of Char: true; if not in array: false
-    cout << str.exists("C++", fac) << endl;
+    string example = "programming with C++";
+    cout << str.exists("C++", example) << endl;
     // ~$:true
 
     // if exist "C++" in array of string: true; if not in array: false

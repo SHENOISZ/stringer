@@ -92,7 +92,7 @@ class String
         int size = texto.length();
         bool exist = false;
 
-        for (int i = 0; i < r.length() - texto.length(); i++)
+        for (int i = 0; i <= r.length() - texto.length(); i++)
         {
             if (String::substr(i, size + i, r) == texto)
             {

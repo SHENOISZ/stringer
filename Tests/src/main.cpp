@@ -66,8 +66,13 @@ int main(int argc, const char* argv[])
 
     cout << "\n============================================\n" << endl;
 
-    // if exist "C++" in array: true; if not in array: false
+    // if exist "C++" in array of Char: true; if not in array: false
     cout << str.exists("C++", fac) << endl;
+    // ~$:true
+
+    // if exist "C++" in array of string: true; if not in array: false
+    string frases[] = {"Developer", "C++", "C", "NULL"};
+    cout << str.exists("C++", frases) << endl;
     // ~$:true
 
     cout << "\n============================================\n" << endl;
@@ -107,10 +112,6 @@ int main(int argc, const char* argv[])
     cout << str.find("en", text)->counter() << endl;
     // ~$:1
 
-    // if "en" exists in string return true; if not false
-    cout << str.find("en", text)->exists() << endl;
-    // ~$:true
-
     cout << "\n============================================\n" << endl;
 
     // conversion types
@@ -129,6 +130,13 @@ int main(int argc, const char* argv[])
 
     cout << tre << endl;
     // ~$:f
+
+    string frase = "Text for test";
+
+    const char* contant = str.toConst(frase);
+
+    cout << contant << endl;
+    // ~$:Text for test
 
     cout << "\n============================================\n" << endl;
 

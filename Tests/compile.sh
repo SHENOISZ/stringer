@@ -1,3 +1,4 @@
 #!/bin/bash
 
-g++ src/main.cpp -o builder/main
+g++ src/main.cpp -o build/main
+build/main

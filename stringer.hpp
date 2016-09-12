@@ -7,11 +7,13 @@
 #define for_each( item, items )\
  for(int i = 0; i <= shenoisz::String::len( items ) + 1; item = items[i], i++)
 
-
 namespace std {
 namespace shenoisz {
 
-class Util
+typedef string** Matrix;
+typedef string* Vector;
+
+class Util : string
 {
 
  public:
@@ -62,19 +64,6 @@ class Util
         }
     }
 
-    bool exists()
-    {
-        if (init > -1)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-
-    }
-
  private:
 
     int init;
@@ -95,6 +84,24 @@ class String
 
     ~String() {
         // destructor
+    }
+
+    bool exists(string texto, string r)
+    {
+        string item;
+        int size = texto.length();
+        bool exist = false;
+
+        for (int i = 0; i < r.length() - texto.length(); i++)
+        {
+            if (String::substr(i, size + i, r) == texto)
+            {
+                exist = true;
+                break;
+            }
+        }
+
+        return exist;
     }
 
     bool exists(string texto, string* r)
@@ -598,9 +605,22 @@ class String
         return value;
     }
 
+    static char* toConst(string texto)
+    {
+        char *local = new char[texto.length()];
+
+        for (int i = 0; i < texto.length(); i++)
+        {
+            local[i] = texto[i];
+        }
+
+        return local;
+    }
+
  private:
 
 } str;
+
 
 }
 }

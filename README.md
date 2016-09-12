@@ -71,8 +71,15 @@ cout << str.substr(0, 13, text) << endl;
 ```c++
 string fac[] = {"pro", "com", "C++", "NULL"};
 
-// if exist "C++" in array: true; if not in array: false
+// if exist "C++" in array of Char: true; if not in array: false
 cout << str.exists("C++", fac) << endl;
+// ~$:true
+```
+<br>
+```c++
+// if exist "C++" in array of string: true; if not in array: false
+string frases[] = {"Developer", "C++", "C", "NULL"};
+cout << str.exists("C++", frases) << endl;
 // ~$:true
 ```
 <br>
@@ -117,10 +124,6 @@ cout << "string position:"
 // count "en" exist in string
 cout << str.find("en", text)->counter() << endl;
 // ~$:1
-
-// if "en" exists in string return true; if not false
-cout << str.find("en", text)->exists() << endl;
-// ~$:true
 ```
 <br>
 ```c++
@@ -142,6 +145,15 @@ string tre = str.toString(caract);
 
 cout << tre << endl;
 // ~$:f
+```
+<br>
+```c++
+string frase = "Text for test";
+
+const char* contant = str.toConst(frase);
+
+cout << contant << endl;
+// ~$:Text for test
 ```
 <br>
 ```c++
